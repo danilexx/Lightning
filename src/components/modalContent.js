@@ -1,6 +1,7 @@
 import Auth from './Modal/Auth.js'
 import Region from './Modal/Region.js'
 import About from './Modal/About.js'
+import Help from './Modal/Help.js'
 import Donate from './Modal/Donate.js'
 
 export default {
@@ -9,6 +10,7 @@ export default {
     Auth,
     Region,
     About,
+    Help,
     Donate
   },
   data: function () {
@@ -50,7 +52,9 @@ export default {
           <Region />
         </div>
         <div v-show="modalItem == 'dashboard'">Dashboard</div>
-        <div v-show="modalItem == 'help'">Help</div>
+        <div v-show="modalItem == 'help'">
+          <Help />
+        </div>
         <div v-show="modalItem == 'about'">
           <About />
         </div>
