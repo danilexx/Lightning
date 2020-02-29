@@ -15,14 +15,15 @@ export default {
         <div v-on:click="modal = !modal" class="modal-background"></div>
         <div class="modal-card">
           <header class="modal-card-head">
-            <p class="modal-card-title">Lightning</p>
+            <p class="modal-card-title">Lightning - Custom Port</p>
             <button v-on:click="modal = !modal" class="delete" aria-label="close"></button>
           </header>
+
           <section class="modal-card-body">
-            <modalContent />
+            Content
           </section>
+
           <footer class="modal-card-foot">
-            <!-- <button class="button is-success">Save changes</button> -->
             <button v-on:click="modal = !modal" class="button">Close</button>
           </footer>
         </div>
