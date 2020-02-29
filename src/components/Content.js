@@ -1,5 +1,10 @@
+import Custom from './Lightning/Custom.js'
+
 export default {
     name: 'Content',
+    components: {
+        Custom
+    },
     data: function () {
         return {
             port: ''
@@ -57,6 +62,7 @@ export default {
         <div class="box">
             <div class="media-content">
             <div class="content">
+                <Custom />
                 <span class="tag is-primary"><input v-model="port"></span>
                 <div class="title">Custom</div>
                 <button class="button" onclick="lightning('Custom', localStorage.getItem('port'));">Port</button>
