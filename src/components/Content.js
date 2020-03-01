@@ -5,21 +5,6 @@ export default {
     components: {
         Custom
     },
-    data: function () {
-        return {
-            port: ''
-        }
-    },
-    mounted() {
-        if (localStorage.port) {
-            this.port = localStorage.port;
-        }
-    },
-    watch: {
-        port(newPort) {
-            localStorage.port = newPort;
-        }
-    },
     template: `
 <div class="lightningContent">
 
@@ -60,14 +45,7 @@ export default {
         </div>
         <div class="column is-half">
         <div class="box">
-            <div class="media-content">
-            <div class="content">
-                <Custom />
-                <span class="tag is-primary"><input v-model="port"></span>
-                <div class="title">Custom</div>
-                <button class="button" onclick="lightning('Custom', localStorage.getItem('port'));">Port</button>
-            </div>
-            </div>
+            <Custom />
         </div>
         </div>
     </div>
