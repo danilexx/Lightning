@@ -1,6 +1,7 @@
 import Auth from './Modal/Auth.js'
 import Region from './Modal/Region.js'
 import About from './Modal/About.js'
+import Help from './Modal/Help.js'
 import Donate from './Modal/Donate.js'
 
 export default {
@@ -9,6 +10,7 @@ export default {
     Auth,
     Region,
     About,
+    Help,
     Donate
   },
   data: function () {
@@ -30,10 +32,8 @@ export default {
           </ul>
           <p class="menu-label">General</p>
           <ul class="menu-list">
-            <li><a v-on:click="modalItem = 'dashboard'"
-                v-bind:class="{ 'is-active': modalItem == 'dashboard' }">Dashboard</a></li>
-            <li><a v-on:click="modalItem = 'help'" v-bind:class="{ 'is-active': modalItem == 'help' }">Help</a></li>
             <li><a v-on:click="modalItem = 'about'" v-bind:class="{ 'is-active': modalItem == 'about' }">About</a></li>
+            <li><a v-on:click="modalItem = 'help'" v-bind:class="{ 'is-active': modalItem == 'help' }">Help</a></li>
           </ul>
           <p class="menu-label">Contribute</p>
           <ul class="menu-list">
@@ -49,10 +49,11 @@ export default {
         <div v-show="modalItem == 'region'">
           <Region />
         </div>
-        <div v-show="modalItem == 'dashboard'">Dashboard</div>
-        <div v-show="modalItem == 'help'">Help</div>
         <div v-show="modalItem == 'about'">
           <About />
+        </div>
+        <div v-show="modalItem == 'help'">
+          <Help />
         </div>
         <div v-show="modalItem == 'donate'">
           <Donate />
