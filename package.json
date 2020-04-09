@@ -1,6 +1,6 @@
 {
   "name": "Lightning",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A port forwarding utility",
   "main": "main.js",
   "scripts": {
@@ -19,14 +19,14 @@
   "author": "SuchACharles",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "bulma": "^0.8.0",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bulma": "^0.8.1",
     "electron-updater": "^4.2.5",
     "ngrok": "^3.2.7",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "electron": "^8.1.1",
+    "electron": "^8.2.1",
     "electron-builder": "^22.4.1"
   },
   "build": {
