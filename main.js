@@ -39,7 +39,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: __dirname + './public/img/icon.ico',
+    //icon: __dirname + './public/img/icon.ico',
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: false,
