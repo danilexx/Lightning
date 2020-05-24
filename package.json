@@ -20,14 +20,14 @@
   "license": "GPL-3.0-only",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "bulma": "^0.8.1",
-    "electron-updater": "^4.2.5",
+    "bulma": "^0.8.2",
+    "electron-updater": "^4.3.1",
     "ngrok": "^3.2.7",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "electron": "^8.2.1",
-    "electron-builder": "^22.4.1"
+    "electron": "^9.0.0",
+    "electron-builder": "^22.6.1"
   },
   "build": {
     "appId": "com.suchacharles.lightning",
