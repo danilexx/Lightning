@@ -26,8 +26,8 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "electron": "^9.0.0",
-    "electron-builder": "^22.6.1"
+    "electron": "^9.0.2",
+    "electron-builder": "^22.7.0"
   },
   "build": {
     "appId": "com.suchacharles.lightning",
