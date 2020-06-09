@@ -16,7 +16,7 @@ export default {
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
-          <img src="./public/img/icon.ico" height="28">
+          Lightning
         </a>
 
         <a v-on:click="modal = !modal" v-bind:class="{ 'is-active': modal }" role="button" class="navbar-burger burger"
