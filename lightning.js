@@ -18,6 +18,7 @@ function lightning(lightningName, lightningAddr) {
             addr: lightningAddr,
             authtoken: lightningAuthtoken,
             region: lightningRegion,
+            binPath: path => path.replace('app.asar', 'app.asar.unpacked'),
         });
 
         var cleanURL = url.replace('tcp://', '');
