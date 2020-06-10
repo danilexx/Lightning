@@ -1,52 +1,98 @@
-import modalContent from './modalContent.js'
+import Notification from './Notification.js'
+import Dashboard from './Modal/Dashboard.js'
+import Auth from './Modal/Auth.js'
+import Region from './Modal/Region.js'
+import About from './Modal/About.js'
+import Help from './Modal/Help.js'
+import Donate from './Modal/Donate.js'
+import controlPanel from './controlPanel.js'
 
 export default {
   name: 'Modal',
   components: {
-    modalContent
+    Notification,
+    Dashboard,
+    Auth,
+    Region,
+    About,
+    Help,
+    Donate,
+    controlPanel
   },
   data: function () {
     return {
-      modal: false
+      modalItem: 'dashboard'
     }
   },
-  template: `
-<div>
+  template: `<div>
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          Lightning
-        </a>
+  <div class="flex">
+    <div class="w-1/5 bg-blue-900 text-blue-700 h-screen">
 
-        <a v-on:click="modal = !modal" v-bind:class="{ 'is-active': modal }" role="button" class="navbar-burger burger"
-          aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+      <div class="flex">
+        <div class="w-full"></div>
+        <div class="w-full"></div>
+        <div class="w-full"></div>
+        <div class="w-full"></div>
       </div>
-    </nav>
 
-    <transition name="fade">
-      <div v-if="modal" class="modal" v-bind:class="{ 'is-active': modal }">
-        <div v-on:click="modal = !modal" class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Lightning</p>
-            <button v-on:click="modal = !modal" class="delete" aria-label="close"></button>
-          </header>
-          <section class="modal-card-body">
-            <modalContent />
-          </section>
-          <footer class="modal-card-foot">
-            <!-- <button class="button is-success">Save changes</button> -->
-            <button v-on:click="modal = !modal" class="button">Close</button>
-          </footer>
+      <div class="w-full text-center">
+        <i class="fas fa-bolt text-blue-500 text-3xl py-5"></i>
+      </div>
+      <a v-on:click="modalItem = 'dashboard'" v-bind:class="{ 'text-green-500': modalItem == 'dashboard' }">
+        <div class="w-full text-center text-3xl cursor-pointer">
+          <i class="fas fa-tachometer-alt"></i>
         </div>
+      </a>
+      <a v-on:click="modalItem = 'auth'" v-bind:class="{ 'text-green-500': modalItem == 'auth' }">
+        <div class="w-full text-center text-3xl cursor-pointer">
+          <i class="fas fa-lock"></i>
+        </div>
+      </a>
+      <a v-on:click="modalItem = 'region'" v-bind:class="{ 'text-green-500': modalItem == 'region' }">
+        <div class="w-full text-center text-3xl cursor-pointer">
+          <i class="fas fa-globe-americas"></i>
+        </div>
+      </a>
+      <a v-on:click="modalItem = 'about'" v-bind:class="{ 'text-green-500': modalItem == 'about' }">
+        <div class="w-full text-center text-3xl cursor-pointer">
+          <i class="fas fa-info-circle"></i>
+        </div>
+      </a>
+      <a v-on:click="modalItem = 'help'" v-bind:class="{ 'text-green-500': modalItem == 'help' }">
+        <div class="w-full text-center text-3xl cursor-pointer">
+          <i class="fas fa-question-circle"></i>
+        </div>
+      </a>
+      <a v-on:click="modalItem = 'donate'" v-bind:class="{ 'text-green-500': modalItem == 'donate' }">
+        <div class="w-full text-center text-3xl cursor-pointer">
+          <i class="fas fa-donate"></i>
+        </div>
+      </a>
+    </div>
+    <div class="w-full bg-gray-500 h-screen py-8 px-8">
+      <Notification />
+      <div v-show="modalItem == 'dashboard'">
+        <Dashboard />
       </div>
-    </transition>
+      <div v-show="modalItem == 'auth'">
+        <Auth />
+      </div>
+      <div v-show="modalItem == 'region'">
+        <Region />
+      </div>
+      <div v-show="modalItem == 'about'">
+        <About />
+      </div>
+      <div v-show="modalItem == 'help'">
+        <Help />
+      </div>
+      <div v-show="modalItem == 'donate'">
+        <Donate />
+      </div>
+      <controlPanel />
+    </div>
+  </div>
 
-</div>
-    `
+</div>`
 }

@@ -16,10 +16,9 @@ export default {
             localStorage.region = newRegion;
         }
     },
-    template: `
-<div>
+    template: `<div>
 
-<div class="title">Region</div>
+<div class="text-4xl font-bold">Region</div>
 <div v-on:click="regionDropdown = !regionDropdown" v-bind:class="{ 'is-active': regionDropdown }"
     class="dropdown">
     <div class="dropdown-trigger">
@@ -61,6 +60,5 @@ export default {
     </div>
 </div>
 
-</div>
-    `
+</div>`
 }

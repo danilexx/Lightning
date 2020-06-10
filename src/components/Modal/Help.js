@@ -1,10 +1,8 @@
 export default {
     name: 'Help',
-    template: `
-<div>
+    template: `<div>
 
-<div class="title">Help</div>
+<div class="text-4xl font-bold">Help</div>
 
-</div>
-    `
+</div>`
 }

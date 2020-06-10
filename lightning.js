@@ -7,7 +7,7 @@ function lightning(lightningName, lightningAddr) {
 
     ngrok.disconnect();
 
-    notify('&#9889; <b>' + lightningName + '</b> Port Successfully Created!');
+    notify(lightningName);
 
     var lightningAuthtoken = localStorage.getItem('auth');
     var lightningRegion = localStorage.getItem('region');
@@ -27,6 +27,10 @@ function lightning(lightningName, lightningAddr) {
         document.getElementById('controlpanel').style.display = "block";
         document.getElementById("controlpanel-title").innerHTML = "<b>" + lightningName + "</b>:" + lightningAddr + " <span style='font-weight:bold;text-transform: uppercase;'>" + lightningRegion + "</span>";
         document.getElementById("controlpanel-link").innerHTML = cleanURL + " was copied to your clipboard.";
+
+        localStorage.setItem('controlpanel-title', lightningName);
+        localStorage.setItem('controlpanel-addr', lightningAddr);
+        localStorage.setItem('controlpanel-link', cleanURL);
 
     })();
 

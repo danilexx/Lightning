@@ -3,7 +3,7 @@ export default {
     template: `
 <div>
 
-<div class="title">Donate</div>
+<div class="text-4xl font-bold">Donate</div>
 <a href="https://www.paypal.me/modderday" target="_blank" class="button">
     <span class="icon is-small is-left">
         <i class="fab fa-paypal"></i>
