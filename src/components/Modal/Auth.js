@@ -23,8 +23,8 @@ export default {
 <div class="control has-icons-left">
     <label class="label">Auth Token</label>
     <div class="control">
-        <input v-model="auth" v-bind:class="{ 'is-success': auth.length == 43, 'is-danger': auth.length < 43 }"
-            class="input" type="text" maxlength="43" placeholder="Authentication Token">
+        <input v-model="auth" v-bind:class="{ 'is-success': auth.length == 48, 'is-danger': auth.length < 48 }"
+            class="input" type="text" maxlength="48" placeholder="Authentication Token">
         <span class="icon is-small is-left">
             <i class="fas fa-key"></i>
         </span>
